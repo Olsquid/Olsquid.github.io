@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>側邊面板擴充教學</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/logo.png" type="image" />
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+      <!--滾動圖示教學css-->
+      <style>
+      #galleryWrapper {
+         position: relative;
+         width: 80%; /* 設定為100%以支持響應式設計 */
+         margin: auto;
+         overflow: hidden;
+      }
+      #imageContainer {
+         display: flex;
+         transition: transform 0.5s ease;
+         will-change: transform;
+      }
+      #imageContainer img {
+         width: 100%; /* 改為 width: 100% 確保圖片能夠適應其容器 */
+         display: block;
+         flex-shrink: 0; /* 防止圖片在容器太小時被壓縮 */
+         object-fit: contain; /* 保持圖片比例 */
+      }
+      button {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         background-color: #000000;
+         color: #ffffff; /* 確保按鈕內的圖標可見 */
+         border: none;
+         padding: 10px;
+         cursor: pointer;
+         z-index: 2;
+         border-radius: 50%;
+         width: 50px;
+         height: 50px;
+      }
+      #prevBtn {
+         left: 10px;
+      }
+      #nextBtn {
+         right: 10px;
+      }
+      </style>
+   </head>
+   <!-- body -->
+   <body class="main-layout about_pape">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div  class="loader"><img style="border-radius: 50%;overflow: hidden;" src="images/loading.gif" alt="image69"></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header class="section">
+         <!-- header inner -->
+         <div class="header_main">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo"><a href="https://www.cute.edu.tw/"><img width="50" height="50" src="images/logo.png" alt="#"></a></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="text-align: right;height: 88px;" class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <div style="" class="menu-area">
+                        <div style="display: flex; justify-content: flex-end;" class="limit-box">
+                           <nav style="position: absolute;text-right" class="main-menu">
+                              <ul class="menu-area-main">
+                                 <li> <a class="color-change-btn" style="padding-top: 36px;font-size: 25px;text-align: center;height: 88px;" href="intro.html">教學</a> </li>
+                                 <li><a class="color-change-btn" style="padding-top: 36px;font-size: 25px;text-align: center;height: 88px;" href="feedback.html">回饋</a></li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- end header inner -->
+      </header>
+      <!-- end header -->
+            <!--about -->
+       <div style="padding-top: 30px;" class="section about ">
+         <div class="container">
+             <div class="row">
+                <div class="col-12">
+                    <div style="padding-bottom: 30px;" class="titlepage">
+                     <h2><strong class="black">使用教學</strong><!--可以再塞字--></h2>
+                     <span style="font-size: 28px">以下圖片是個別功能的使用說明與介紹</span>
+                  </div>
+                </div>
+             </div>
+         </div>
+      </div>
+      <section >
+         <div style="margin-bottom: 0px;" id="main_slider" class="section carousel slide banner-main" data-ride="carousel">
+            <!--要塞滾動的地方-->
+            <div id="galleryWrapper">
+               <button id="prevBtn"><img src="images/left-icon.png" alt="button1"></button>
+               <div id="imageContainer">
+                  <img src="images/image1.png" alt="Image 1">
+                  <img src="images/image2.png" alt="Image 2">
+                     <!-- 更多圖片 -->
+                  <img src="images/image3.png" alt="Image 3">
+               </div>
+                  <button id="nextBtn"><img src="images/right-icon.png" alt="button2"></button>
+               </div>
+      </section>
+
+      </div>
+      <!--end about -->
+
+      <!-- footer start-->
+      <div style="margin-top: 0px;height: 150px;" class="copyright_text">
+      <div style="background-color: #081b30;height: 100%;" id="plant" class="footer layout_padding">
+      </div>
+      </div>
+
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+      <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+         openEffect: "none",
+         closeEffect: "none"
+         });
+         
+         $(".zoom").hover(function(){
+         
+         $(this).addClass('transition');
+         }, function(){
+         
+         $(this).removeClass('transition');
+         });
+         });
+         
+      //滾動圖示教學的js
+      const imageContainer = document.getElementById('imageContainer');
+      const images = imageContainer.getElementsByTagName('img');
+      let currentIndex = 0;
+
+      function updateImageWidth() {
+         scrollToImage(currentIndex);
+      }
+
+      window.addEventListener('resize', updateImageWidth);
+
+      function scrollToImage(index) {
+         const imageWidth = imageContainer.clientWidth;
+         imageContainer.style.transform = `translateX(${index * -imageWidth}px)`;
+      }
+
+      document.getElementById('prevBtn').addEventListener('click', function() {
+         currentIndex = (currentIndex - 1 + images.length) % images.length;
+         scrollToImage(currentIndex);
+      });
+
+      document.getElementById('nextBtn').addEventListener('click', function() {
+         currentIndex = (currentIndex + 1) % images.length;
+         scrollToImage(currentIndex);
+      });
+      </script> 
+
+
+</body>
+</html>
